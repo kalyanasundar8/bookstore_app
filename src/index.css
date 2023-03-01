@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'QuickSand';
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Navbar design */
+ nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 10px 20px;
+  padding: 10px 20px;
+} 
+
+a {
+  text-decoration: none;
+  padding: 20px;
+  font-size: 1.1em;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Navbar design end */
+
+/* BookList page design */
+.books {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 50px;
+} 
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  border: 1px solid #00fb36;
+  border-radius: 8px;
+}
+
+.book-list:hover {
+  transition: all .2s ease-in-out;
+  transform: scale(1.1);
+}
+
+.loader {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* BookList page design end */
+
+/* Create page design */
+
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 10px;
+  border: 1px solid #00fb36;
+  box-sizing: border-box;
+  display: block;
+}
+
+.create button {
+  background: #00b126;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Create page design end */
+
+/* book details page */
+.book-details {
+  margin: 20px 150px;
+}
+
+.details {
+ display: flex;
+ justify-content: space-between;
+}
+
+.details .books-desc {
+  width: 800px;
+}
+
+.details h1 {
+  padding-left: 10px;
+  font-size: 4rem;
+  border-left: 8px solid #00b126;
+  border-radius: 8px;
+}
+
+.details .author {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.details .desc {
+  max-width: 900px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.details img {
+  width: 300px;
+}
+
+
+/* Media query */
+@media only screen and (max-width:768px){
+  .books{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .book-details {
+    margin: 10px 50px;
+  }
+
+  .details {
+    flex-direction: column;
+   }
+
+   .details .desc {
+    width: 350px;
+    text-align: start;
+   }
+}
